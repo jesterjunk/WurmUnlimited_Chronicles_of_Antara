@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html lang="en" style="background: hsl(70, 8%, 15%); overflow-y: scroll;">
+<head>
+    <meta charset="UTF-8">
+    <title>Wurm Unlimited: Chronicles of Antara</title>
+    <link rel="icon" type="image/x-icon" href="/WurmUnlimited_Chronicles_of_Antara/favicon.ico">
+    <style>
+    body {
+        margin: 20px;
+        color: hsl(60, 30%, 96%);
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.5em;
+    }
+
+
+    /*  URLS  */
+    a:link,
+    a:visited {color: hsl(190, 81%, 67%); text-decoration: none; outline: none;}
+    a:hover {color: hsl(80, 76%, 53%);}
+    a:active {color: hsl(40, 93%, 51%);}
+    /*  URLS  */
+
+
+    #main {
+        margin: 0 auto;
+        width: 800px;
+    }
+    hr {
+        border: none;
+        height: 1px;
+        background: hsl(50, 11%, 41%);
+    }
+    h4 {
+        margin-top: 20px;
+    }
+    table#maps_notes {
+        margin-top: 42px;
+    }
+    table#maps_notes tr td.symbol {
+        margin: 0;
+        padding: 0;
+        width: 15px;
+        vertical-align: text-top;
+    }
+    .pipe {
+        padding: 0 6px;
+        /*font-size: 1.05em;*/
+        color: hsl(50, 11%, 41%);
+    }
+    span.asterisk {
+        font-size: 1.25em;
+        line-height: 0;
+        color: hsl(50, 11%, 41%);
+    }
+    span.http {
+        font-size: .9em;
+        color: hsl(50, 11%, 51%);
+    }
+    span.s {
+        font-size: .9em;
+        color: hsl(60, 11%, 81%);
+    }
+    u.hosted_on_GitHub {
+        text-underline-offset: 25%;
+        text-decoration-thickness: 2px;
+        text-decoration-color: hsl(50, 11%, 41%);
+    }
+    </style>
+</head>
+<body>
+
+
+<script>
+fetch(`https://api.github.com/repos/jesterjunk/WurmUnlimited_Chronicles_of_Antara/commits`)
+    .then(res => res.json())
+    .then(out => {
+
+        var timestamp = out[0].commit.committer.date
+        var date = new Date(timestamp)
+
+        var options = {
+            dateStyle: `full`,
+            timeStyle: `long`,
+            timeZone: `America/Chicago`
+        }
+
+        var date_formatted = new Intl.DateTimeFormat(`en-US`, options).format(date)
+        date_formatted = date_formatted
+
+        document.getElementById(`datetime_string`).innerText = `${date_formatted}`
+
+    }).catch(err => console.error(err))
+</script>
+
+
+<div id="main">
+    
+    <h1>Wurm Unlimited: Chronicles of Antara</h1>
+
+    <hr>
+
+    <h4>
+        Maps
+    </h4>
+
+    <p>
+        <span class="http">http</span> <a href="http://www.chroniclesofantara.xyz/antara/" title="Wurm Unlimited: Chronicles of Antara: antara Map" target="_blank">antara</a> <span class="pipe">|</span> <span class="http">http</span><span class="s">s</span> <a href="maps/antara/" title="Wurm Unlimited: Chronicles of Antara: antara Map" target="_blank">mirror</a> <span class="asterisk">*</span>
+    </p>
+
+    <p>
+        <span class="http">http</span> <a href="http://www.chroniclesofantara.xyz/forrest/" title="Wurm Unlimited: Chronicles of Antara: forrest Map" target="_blank">forrest</a> <span class="pipe">|</span> <span class="http">http</span><span class="s">s</span> <a href="maps/forrest/" title="Wurm Unlimited: Chronicles of Antara: forrest Map" target="_blank">mirror</a> <span class="asterisk">*</span>
+    </p>
+
+    <table id="maps_notes">
+        <tr>
+            <td class="symbol">
+                <p>
+                    <span class="asterisk">*</span>
+                </p>
+            </td>
+            <td class="symbol_text">
+                <p>
+                    Mirrors are likely to load faster because they are <u class="hosted_on_GitHub">hosted on <a href="https://github.com/" title="github.com" target="_blank">GitHub</a></u>'s servers, but they may not always be the most up to date, at the moment they are manually updated by jesterjunk.
+
+                    <br><br>
+
+                    The map mirrors were last saved on <span id="datetime_string"></span>
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h4>
+        Repository
+    </h4>
+
+    <p>
+        <a href="https://github.com/jesterjunk/WurmUnlimited_Chronicles_of_Antara" title="GitHub Repository: jesterjunk/WurmUnlimited_Chronicles_of_Antara" target="_blank">github.com/jesterjunk/WurmUnlimited_Chronicles_of_Antara</a>
+    </p>
+
+</div>
+
+
+</body>
+</html>
