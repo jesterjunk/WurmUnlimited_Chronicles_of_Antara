@@ -21,7 +21,7 @@ fetch(`https://api.github.com/repos/jesterjunk/WurmUnlimited_Chronicles_of_Antar
     .then(res => res.json())
     .then(out => {
 
-        var timestamp = out[0].commit.committer.date
+        var timestamp = typeof out !== `undefined` ? out[0].commit.committer.date : `1970-01-01T00:00:00Z`
         var date = new Date(timestamp)
 
         var options = {
