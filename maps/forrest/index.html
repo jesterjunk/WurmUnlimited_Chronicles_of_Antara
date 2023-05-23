@@ -33,7 +33,7 @@ fetch(`https://api.github.com/repos/jesterjunk/WurmUnlimited_Chronicles_of_Antar
         var date_formatted = new Intl.DateTimeFormat(`en-US`, options).format(date)
         date_formatted = date_formatted
 
-        document.getElementById(`last_capture_date_time`).innerHTML = `This map mirror<br><br>was last saved on<br><br>${date_formatted.replace(` at `, `<br><br>at `)}`
+        document.getElementById(`last_capture_date_time`).innerHTML = `The repository for<br><br>this map mirror<br><br>was last pushed on<br><br>${date_formatted.replace(` at `, `<br><br>at `)}`
 
     }).catch(err => console.error(err))
 </script>

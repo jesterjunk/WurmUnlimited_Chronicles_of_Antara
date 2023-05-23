@@ -60,7 +60,7 @@
         font-size: .9em;
         color: hsl(60, 11%, 81%);
     }
-    u.hosted_on_GitHub {
+    u.hosted_on_GitHub_Pages {
         text-underline-offset: 25%;
         text-decoration-thickness: 2px;
         text-decoration-color: hsl(50, 11%, 41%);
@@ -104,12 +104,14 @@ fetch(`https://api.github.com/repos/jesterjunk/WurmUnlimited_Chronicles_of_Antar
     </h4>
 
     <p>
-        <span class="http">http</span> <a href="http://www.chroniclesofantara.xyz/antara/" title="Wurm Unlimited: Chronicles of Antara: antara Map" target="_blank">antara</a> <span class="pipe">|</span> <span class="http">http</span><span class="s">s</span> <a href="maps/antara/" title="Wurm Unlimited: Chronicles of Antara: antara Map" target="_blank">mirror</a> <span class="asterisk">*</span>
+        <span class="http">http</span> <a href="http://www.chroniclesofantara.xyz/" title="Wurm Unlimited: Chronicles of Antara: antara Map" target="_blank">antara</a> <span class="pipe">|</span> <span class="http">http</span><span class="s">s</span> <a href="maps/antara/" title="Wurm Unlimited: Chronicles of Antara: antara Map" target="_blank">mirror</a> <span class="asterisk">*</span>
     </p>
 
+<!--
     <p>
         <span class="http">http</span> <a href="http://www.chroniclesofantara.xyz/forrest/" title="Wurm Unlimited: Chronicles of Antara: forrest Map" target="_blank">forrest</a> <span class="pipe">|</span> <span class="http">http</span><span class="s">s</span> <a href="maps/forrest/" title="Wurm Unlimited: Chronicles of Antara: forrest Map" target="_blank">mirror</a> <span class="asterisk">*</span>
     </p>
+ -->
 
     <table id="maps_notes">
         <tr>
@@ -120,11 +122,11 @@ fetch(`https://api.github.com/repos/jesterjunk/WurmUnlimited_Chronicles_of_Antar
             </td>
             <td class="symbol_text">
                 <p>
-                    Mirrors are likely to load faster because they are <u class="hosted_on_GitHub">hosted on <a href="https://github.com/" title="github.com" target="_blank">GitHub</a></u>'s servers, but they may not always be the most up to date, at the moment they are manually updated by jesterjunk.
+                    The mirror is likely to load faster because it is <u class="hosted_on_GitHub_Pages">hosted on <a href="https://pages.github.com/" title="pages.github.com" target="_blank">GitHub Pages</a></u>, but it may not always be the most up to date, at the moment it is manually updated by jesterjunk.
 
                     <br><br>
 
-                    The map mirrors were last saved on <span id="datetime_string"></span>
+                    The map mirror repository was last pushed on <span id="datetime_string"></span>
                 </p>
             </td>
         </tr>
